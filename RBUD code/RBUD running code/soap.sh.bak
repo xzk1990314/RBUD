@@ -1,0 +1,6 @@
+#!/bin/bash
+#PBS -q middleq
+#PBS -l mem=5gb|mb|kb,walltime=720:00:00
+#HSCHED -s hschedd+soap+human
+soap -a /p200/mishl_group/xingzhk/genome/chickenmetagenome/Jcdn9/1.fasta -b /p200/mishl_group/xingzhk/genome/chickenmetagenome/Jcdn9/2.fasta -D /p200/apod/lirj/limw/GWAS/Chicken/database/CGMaa.index -o /p200/apod/lirj/limw/GWAS/Chicken/alignment/n9.sop -2 /p200/apod/lirj/limw/GWAS/Chicken/alignment/4.sop -r 2 -m 200 -x 1000
+ 
