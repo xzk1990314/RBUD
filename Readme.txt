@@ -1,31 +1,31 @@
 1. MDGM database introduction
 
-MDGM database has two datasets, including Species dataset and Functional dataset. Each dataset consists of two floders of Sequence and Annotation. In functional dataset, we added gene annotation information of different database in the folder named Annotation Database, containg ARDB, CARD,CAZy,COG,eggNOG,KEGG. Moreover, we provided a folder named linkdb_genes to find the annotation of the above database using gene id ,gi id and protein id.However,due to the size of this database is too large,we provided the method of building it.
+Mdgm database includes species data set and function data set. The functional data set contains gene annotation information from different databases. The folder is called annotation database, including information from ARDB, CARD, CAZY, COG, eggNOG and KEGG. In addition, we provide a file called Linkdb_gene, the users can link it with gene ID, GI ID and protein to find the comments. the method of establishing the database and the running code was gave as follows.
 
 
 2. The code of MDGM database construction
 
 #Preparation
 
-it should download the data of all microorganism with the suffixes of fna,gbk,ffn and gff.In this process,all microorganism contain archaea,bacteria,fungi,virus and so on.
+You should download all microorganism data from NCBI, the data should include the suffixes of fna,gbk,ffn and gff. In this process,all microorganism contain archaea,bacteria,fungi,virus.
 
 # 2bwt-builder-species.sh
 
-it was used to create binary of reference genome for species dataset.
+it is for creating binary of reference genome for species dataset.
 
 # species_annotation.pl 
 
-it was used to extract the species annotation.
+it is for extracting the species annotation.
 
 # 2bwt-builder-CDS.sh
 
-it was used to create binary of reference genome for functional dataset.
+it is for creating binary of reference genome for functional dataset.
 
 # gene annotation.pl
  
-it was used to extract the funcitonal annotation of microorganism.
+it is for extracting the funcitonal annotation of microorganism.
 
-# According to gene id, gi id and protein id to find the annotation in the databases of ARDB,CARD,CAZy, COG,KEGG.If you can't find the annotation,it is the best way to align DNA sequence to these databases for functional annotation using Blast software.
+# According to gene ID, GI ID and protein ID to find the annotation in databases of ARDB,CARD,CAZy, COG,KEGG. If you can't find the annotation,it is the best way to align DNA sequence to these databases for functional annotation using Blast software.
 
 #Finally, based on the above biological information to construct MDGM database.
 
@@ -33,7 +33,7 @@ it was used to extract the funcitonal annotation of microorganism.
 
 # Preparation
 
-Before you use RBUD method,you should build your development environment in Liux. In addition,SOAPaligner/soap2 should be installed.
+Before you use RBUD method,you should build your development environment in Liux. In addition, SOAPaligner/soap2 should be installed.
 
 ## soap.sh
 
@@ -44,7 +44,7 @@ Align query to genome and store output.
 Based on fasta format file, this script could caculate the length of reference sequence that aligned by sequecing data.
 
 
-# Runing the software of RBUD method
+# Runing RBUD method
 
 ## RBUD.py
 
@@ -52,6 +52,6 @@ A script for RBUD method. length_file is the length of every items of reference 
 
 Comments: python RBUD.py -l length_file -i input_file -o output_file
 
-## According the results of the software of RBUD method, you could use other statistical tools to compare the difference of different groups in your metagenomic research.
+## According the results of RBUD method, you could use other statistical tools/softwares to compare the difference in your metagenomic research.
 
 
