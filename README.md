@@ -17,7 +17,13 @@ as individual software packages (typically `Python`,`Perl` or `R`).
 - SOAPaligner/soap2
 - MDGM database
 
-## **MDGM database 
+Note: MDGM database is essential for RBUD method. For the purpose to study bacteria, viruses and fungus separately, we provided codes to establish a separated database that can save time and improve degree of accuracy. Befoe you use RBUD method, you should build your development envrionment in Linux. In addition, SOAPaligner/soap2 should be installed. 
+
+## **2. MDGM database** 
+
+#### **2.1 MDGM database introduction**
+
+MDGM
 
 ## **Microbial community profiling**
 
