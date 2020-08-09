@@ -7,7 +7,7 @@ Zhikai Xing edited this page on 8 August, 2020. first version
 **Website: https://github.com/DMsiast/RBUD.git**
 
 Welcome to the RBUD 1.0 tutorial, which provides
-software, documentation, and tutorials for methods for microbial
+software, documentation, and tutorial for method for microbial
 community profiling developed by Zhikai Xing. Most tools are supported both
 as individual software packages (typically `Python`,`Perl` or `R`).
 
