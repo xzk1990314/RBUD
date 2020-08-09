@@ -6,24 +6,10 @@ Zhikai Xing edited this page on 8 August, 2020. first version
 
 **Website: https://github.com/DMsiast/RBUD.git**
 
-Welcome to the bioBakery tools and tutorials wiki, which provides
+Welcome to the RBUD 1.0 tutorial, which provides
 software, documentation, and tutorials for methods for microbial
-community profiling developed by the [Huttenhower
-lab](http://huttenhower.sph.harvard.edu). Most tools are supported both
-as individual software packages (typically `Python` or `R`) and within
-the `bioBakery virtual image`, a pre-built platform that provides
-meta'omic analysis tools already installed with dependencies and
-configuration. For the integrated bioBakery virtual environment, please
-click on the button below for more information:
-
-[![image](https://github.com/biobakery/biobakery/blob/master/images/2814622477-biobakery_logo.png)](https://github.com/biobakery/biobakery/wiki/biobakery_wiki)
-
-**If you use bioBakery in your work, please cite the paper:**
-
-McIver LJ, Abu-Ali G, Franzosa EA, Schwager R, Morgan XC, Waldron L,
-Segata N, Huttenhower C. bioBakery: a meta'omic analysis environment.
-Bioinformatics. 2018 Apr 1;34(7):1235-1237. [PMID:
-29194469](https://www.ncbi.nlm.nih.gov/pubmed/29194469)
+community profiling developed by Zhikai Xing. Most tools are supported both
+as individual software packages (typically `Python` or `R`).
 
 ## **Microbial community profiling**
 
