@@ -1,4 +1,4 @@
-**bioBakery tools for meta'omic profiling**
+**Welcome to the RBUD 1.0 tutorial**
 ===========================================
 
 Welcome to the bioBakery tools and tutorials wiki, which provides
