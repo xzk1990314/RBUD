@@ -13,9 +13,9 @@ as individual software packages (typically `Python`,`Perl` or `R`).
 
 ## **1. Requirements**
 
->  1. Linux
->  2. SOAPaligner/soap2
->  3. MDGM database
+- Linux
+- SOAPaligner/soap2
+- MDGM database
 
 ## **MDGM database 
 
