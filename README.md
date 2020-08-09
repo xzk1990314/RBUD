@@ -11,7 +11,7 @@ software, documentation, and tutorial for method for microbial
 community profiling developed by Zhikai Xing. Most tools are supported
 as individual software packages (typically `Python`,`Perl` or `R`). 
 
-**1. Requirements**
+# **1. Requirements**
 
 Before you use RBUD method, you should build your development environment in Linux. 
 In addition, SOAPaligner/soap2 should be install.
