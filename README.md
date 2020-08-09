@@ -13,8 +13,9 @@ as individual software packages (typically `Python`,`Perl` or `R`).
 
 ## **1. Requirements**
 
->Before you use RBUD method, you should build your development environment in Linux. 
->In addition, SOAPaligner/soap2 should be install.
+>  1. Linux
+>  2. SOAPaligner/soap2
+>  3. MDGM database
 
 ## **MDGM database 
 
