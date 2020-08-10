@@ -11,6 +11,7 @@ software, documentation, and tutorial for method for microbial
 community profiling developed by Zhikai Xing. Most tools are supported
 as individual software packages (typically `Python`,`Perl` or `R`). 
 
+------------------------------------------------------------------------
 ## **1. Requirements**
 
 - Linux
@@ -64,10 +65,10 @@ it is for extracting the functional annotation of microorganisms.(gene_annotatio
 Note: In this process, you could obtain the functional annotation information of microbial genes, including gene ID, GI ID, protein ID, COG functions, genetically coded function, location of species origin.
 
 ### **2.2.6 link different functional database with gene ID, GI ID and protein ID to find the comments**
+#### 1. ARDB database
 
-1. 
 
-Note: According to gene ID, GI ID and protein ID to find the annotation in databases of ARDB, CARD, CAZy, COG, KEGG, UniProt, MetaCyc. If you can't find the annotation, it is the best way to align DNA sequence to these databases for functional annotation using blast software.
+Note: According to gene ID, GI ID and protein ID to find the annotation in databases of ARDB, CARD, CAZy, COG, KEGG, UniProt, MetaCyc. If you can't find the annotation, it is the best way to align DNA sequence to these databases for functional annotation using blast software. Finally, based on the above biological information to construct MDGM database.
 
 ## **Downstream analysis and statistics**
 
