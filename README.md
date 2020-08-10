@@ -33,23 +33,41 @@ you should download all microorganism data from NCBI,the data should includ the 
 
 ### **2.2.2 create binary of reference genome for species dataset**
 
-it is for creating binary of reference genome for species dataset
+it is for creating binary of reference genome for species dataset.(2bwt-builder-species.sh)
+
+	> cd /database and method code/MDGM database/Species dataset/Sequence/NCBI_Species
+	> tar -xvf all.fna.tar
+	> cat * >all.fna
+	> 2bwt-builder all.fna
+
+### **2.2.3 extract the species taxonomy annotation**
+
+it is for extracting the species annotation.(species_annotation.pl)
+
+	> perl species_annotation.pl
+Note: In this process, you could obtain the species taxnomy annotation information of all microorganisms, including Phylum, Class, Order, Family, Genus, Species.
+
+### **2.2.4 create binary of reference genome for functional dataset**
+
+it is for creating binary of reference genome for functional dataset.(2bwt-builder-CDS.sh)
 
 	> cd /database and method code/MDGM database/Functional dataset/Sequence/NCBI_CDS
 	> tar -xvf all.ffn.tar
 	> cat * >all.ffn
 	> 2bwt-builder all.ffn
+	
+### **2.2.5 extract the functional annotation**
 
+it is for extracting the functional annotation of microorganisms.(gene_annotation.pl)
 
+	> perl gene_annotation.pl
+Note: In this process, you could obtain the functional annotation information of microbial genes, including gene ID, GI ID, protein ID, COG functions, genetically coded function, location of species origin.
 
-This set of methods generally provide reference-based profiles of
-microbial community features, e.g. taxonomic abundances (MetaPhlAn) or
-functional profiles (genes and/or pathways, HUMAnN). They apply broadly
-to sequence-based data (metagenomes and metatranscriptomes), with some
-methods applying to other types of culture-independent molecular data.
-Please click individual links for detailed tutorials:
+### **2.2.6 link different functional database with gene ID, GI ID and protein ID to find the comments**
 
-[![HUMAnN2](https://github.com/biobakery/biobakery/blob/master/images/1707204205-Humann2.png)](https://github.com/biobakery/biobakery/wiki/humann2) [![MetaPhlAn](https://github.com/biobakery/biobakery/blob/master/images/2972117985-MetaPhlAn.png)](https://github.com/biobakery/biobakery/wiki/metaphlan2) [![PhyloPhlAn](https://github.com/biobakery/biobakery/blob/master/images/1465035284-PhyloPhlAn.png)](https://github.com/biobakery/biobakery/wiki/PhyloPhlAn3) [![PICRUSt](https://github.com/biobakery/biobakery/blob/master/images/3324647301-PICRUST.png)](http://picrust.github.io/picrust/) [![ShortBRED](https://github.com/biobakery/biobakery/blob/master/images/1688137420-ShortBRED.png)](https://github.com/biobakery/biobakery/wiki/shortbred) [![PPANINI](https://github.com/biobakery/biobakery/blob/master/images/4233159523-PPANINI.png)](https://github.com/biobakery/biobakery/wiki/ppanini) [![StrainPhlAn](https://github.com/biobakery/biobakery/blob/master/images/878015430-StrainPhlAn.png)](https://github.com/biobakery/biobakery/wiki/strainphlan3) [![MelonnPan](https://github.com/biobakery/biobakery/blob/master/images/1978093036-MelonnPan.png)](https://github.com/biobakery/biobakery/wiki/melonnpan) [![WAAFLE.png](https://github.com/biobakery/biobakery/blob/master/images/1599300410-WAAFLE_Edited.png)](https://github.com/biobakery/biobakery/wiki/waafle)
+1. 
+
+Note: According to gene ID, GI ID and protein ID to find the annotation in databases of ARDB, CARD, CAZy, COG, KEGG, UniProt, MetaCyc. If you can't find the annotation, it is the best way to align DNA sequence to these databases for functional annotation using blast software.
 
 ## **Downstream analysis and statistics**
 
