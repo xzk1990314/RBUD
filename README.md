@@ -27,10 +27,18 @@ MDGM database includes Species dataset and Functional dataset. The functional da
 
 ### **2.2 The code of MDGM database construction**
 
+### **2.2.1 download microbial data**
 
+you should download all microorganism data from NCBI,the data should includ the suffixes of .fna, .gbk, .ffn, .gff. In this process, all microorganism contain archaea, bacteria, fungi, virus.
 
+### **2.2.2 create binary of reference genome for species dataset**
 
-## **Microbial community profiling**
+it is for creating binary of reference genome for species dataset
+
+ > cd /database and method code/MDGM database/Functional dataset/Sequence/NCBI_CDS
+ > tar -xvf all.ffn.tar
+ > cat * >all.ffn
+ > 2bwt-builder all.ffn
 
 This set of methods generally provide reference-based profiles of
 microbial community features, e.g. taxonomic abundances (MetaPhlAn) or
