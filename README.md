@@ -35,10 +35,12 @@ you should download all microorganism data from NCBI,the data should includ the 
 
 it is for creating binary of reference genome for species dataset
 
- > cd /database and method code/MDGM database/Functional dataset/Sequence/NCBI_CDS
- > tar -xvf all.ffn.tar
- > cat * >all.ffn
- > 2bwt-builder all.ffn
+	> cd /database and method code/MDGM database/Functional dataset/Sequence/NCBI_CDS
+	> tar -xvf all.ffn.tar
+	> cat * >all.ffn
+	> 2bwt-builder all.ffn
+
+
 
 This set of methods generally provide reference-based profiles of
 microbial community features, e.g. taxonomic abundances (MetaPhlAn) or
