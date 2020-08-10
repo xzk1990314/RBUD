@@ -71,11 +71,12 @@ Note: In this process, you could obtain the functional annotation information of
 
 2> For genomeblast.tab file, according to protein ID (the second column), you can obtained special ID of ARDB database (the third column).
 
-3) For ar_genes.tab file, you can transfer species ID (the first column) to antibiotic resistance gene name (the second column).
+3> For ar_genes.tab file, you can transfer species ID (the first column) to antibiotic resistance gene name (the second column).
 
 4> Based on antibiotic resistance gene name,  types of antibotic and functions of these genes are performed in resistance_profile.tab and classinfo.tab files separately.
 
 another way:
+
 	> perl ardbAnno.pl
 #### 2. functional annotation of CARD database
 
