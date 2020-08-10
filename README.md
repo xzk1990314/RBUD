@@ -16,6 +16,7 @@ as individual software packages (typically `Python`,`Perl` or `R`).
 
 - Linux
 - SOAPaligner/soap2
+- BLAST/Diamond
 - MDGM database
 
 Note: MDGM database is essential for RBUD method. For the purpose to study bacteria, viruses and fungus separately, we provided codes to establish a separated database that can save time and improve degree of accuracy. Befoe you use RBUD method, you should build your development envrionment in Linux. In addition, SOAPaligner/soap2 should be installed. 
@@ -46,7 +47,7 @@ it is for creating binary of reference genome for species dataset.(2bwt-builder-
 it is for extracting the species annotation.(species_annotation.pl)
 
 	> perl species_annotation.pl
-Note: In this process, you could obtain the species taxnomy annotation information of all microorganisms, including Phylum, Class, Order, Family, Genus, Species.
+Note: In this process, you could obtain the species taxnomy annotation information of all microorganisms, including Phylum, Class, Order, Family, Genus, Species.(species annotation) 
 
 ### **2.2.4 create binary of reference genome for functional dataset**
 
@@ -62,7 +63,7 @@ it is for creating binary of reference genome for functional dataset.(2bwt-build
 it is for extracting the functional annotation of microorganisms.(gene_annotation.pl)
 
 	> perl gene_annotation.pl
-Note: In this process, you could obtain the functional annotation information of microbial genes, including gene ID, GI ID, protein ID, COG functions, genetically coded function, location of species origin.
+Note: In this process, you could obtain the functional annotation information of microbial genes, including gene ID, GI ID, protein ID, COG functions, genetically coded function, location of species origin.(CDS.gff/gene.gff)
 
 ### **2.2.6 link different functional database with gene ID, GI ID and protein ID to find the comments**
 #### 1. functional annotation of ARDB database
@@ -79,6 +80,12 @@ another way:
 
 	> perl ardbAnno.pl
 #### 2. functional annotation of CARD database
+
+1> Download https://ftp.ncbi.nih.gov/gene/DATA/gene2accession file.
+
+2> According to gene ID in gene functional annotation file (CDS.gff), you can extract protein_accession (the six column) in the gene2accession file.
+
+3>Based on
 
 Note: According to gene ID, GI ID and protein ID to find the annotation in databases of ARDB, CARD, CAZy, COG, KEGG, UniProt, MetaCyc. If you can't find the annotation, it is the best way to align DNA sequence to these databases for functional annotation using blast software. Finally, based on the above biological information to construct MDGM database.
 
