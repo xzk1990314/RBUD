@@ -65,8 +65,19 @@ it is for extracting the functional annotation of microorganisms.(gene_annotatio
 Note: In this process, you could obtain the functional annotation information of microbial genes, including gene ID, GI ID, protein ID, COG functions, genetically coded function, location of species origin.
 
 ### **2.2.6 link different functional database with gene ID, GI ID and protein ID to find the comments**
-#### 1. ARDB database
+#### 1. functional annotation of ARDB database
 
+1> genomeblast.tab, ar_genes.tab, class2info.tab, resistance_profile.tab are opened in ARDB folder of linkdb_genes folder.
+
+2> For genomeblast.tab file, according to protein ID (the second column), you can obtained special ID of ARDB database (the third column).
+
+3) For ar_genes.tab file, you can transfer species ID (the first column) to antibiotic resistance gene name (the second column).
+
+4> Based on antibiotic resistance gene name,  types of antibotic and functions of these genes are performed in resistance_profile.tab and classinfo.tab files separately.
+
+another way:
+	> perl ardbAnno.pl
+#### 2. functional annotation of CARD database
 
 Note: According to gene ID, GI ID and protein ID to find the annotation in databases of ARDB, CARD, CAZy, COG, KEGG, UniProt, MetaCyc. If you can't find the annotation, it is the best way to align DNA sequence to these databases for functional annotation using blast software. Finally, based on the above biological information to construct MDGM database.
 
