@@ -21,9 +21,14 @@ Note: MDGM database is essential for RBUD method. For the purpose to study bacte
 
 ## **2. MDGM database** 
 
-#### **2.1 MDGM database introduction**
+### **2.1 MDGM database introduction**
 
-MDGM
+MDGM database includes Species dataset and Functional dataset. The functional dataset contains gene annotation information from different databases. The folder is called Annotation Database, including information from Antibiotic Resistance Gene Database (ARDB), The Comprehensive Antibiotic Resistance Database(CARD), Carbohydrate-Active enZymes Database (CAZy)，eggNOG, Kyoto Encyclopedia of Genes and Genomes (KEGG), Universal Protein (UniProt), Metabolic Pathways From all Domains of Life (MetaCyc). In additon, we provide a file called linkdb_genes, the users can link it with gene ID, GI ID and protein ID to find the comments.The method of establishing the database and the running code gave as follows.
+
+### **2.2 The code of MDGM database construction**
+
+
+
 
 ## **Microbial community profiling**
 
