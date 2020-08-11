@@ -85,7 +85,14 @@ another way:
 
 2> According to gene ID in gene functional annotation file (CDS.gff), you can extract protein_accession (the six column) in the gene2accession file.
 
-3>Based on
+3>Based on protein accession, you can obtain ARO name (the third column) and ARO accession (the fourth column) from aro_index file. And then, aro and CARD-aro_categories_index files provide antibiotic name (the second column)/description (the third column) and ARO Category Name (the third column) separately. 
+
+### 3. functional annotation of CAZy database
+
+1> 
+
+
+
 
 Note: According to gene ID, GI ID and protein ID to find the annotation in databases of ARDB, CARD, CAZy, COG, KEGG, UniProt, MetaCyc. If you can't find the annotation, it is the best way to align DNA sequence to these databases for functional annotation using blast software. Finally, based on the above biological information to construct MDGM database.
 
