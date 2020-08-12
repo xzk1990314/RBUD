@@ -66,6 +66,11 @@ it is for extracting the functional annotation of microorganisms.(gene_annotatio
 Note: In this process, you could obtain the functional annotation information of microbial genes, including gene ID, GI ID, protein ID, COG functions, genetically coded function, location of species origin.(CDS.gff/gene.gff)
 
 ### **2.2.6 link different functional database with gene ID, GI ID and protein ID to find the comments**
+
+#### 1. different 
+
+
+
 #### 1. functional annotation of ARDB database
 
 1> genomeblast.tab, ar_genes.tab, class2info.tab, resistance_profile.tab are opened in ARDB folder of linkdb_genes folder.
