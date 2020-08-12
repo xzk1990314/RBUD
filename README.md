@@ -111,7 +111,7 @@ it is for extracting the functional annotation of microorganisms.(gene_annotatio
 	
 4> Based on the above results, you could establish CARD annotation file.
 
-### 4. functional annotation of CAZy database
+#### 4. functional annotation of CAZy database
 
 1> According to gene ID and protein ID (CDS.gff/gene.gff), you can obtain genebank name in gene2accession file.
 
@@ -143,7 +143,7 @@ it is for extracting the functional annotation of microorganisms.(gene_annotatio
 
 **Note:** you can use dimond or blast software to align species_protein.faa with CAZyDB.fa. Moreover, you also run dbcan software to find the annotation of target protein.
 
-### 5. functional annotation of COG database (eggNOG database)
+#### 5. functional annotation of COG database (eggNOG database)
 
 **The Best Way**
 
@@ -165,7 +165,7 @@ you can obtain COG number directly in CDS.gff file. In COG database, cognames200
 	
 4> Based on the above results, you could establish COG annotation file.
 
-### 6. functional annotation of KEGG database
+#### 6. functional annotation of KEGG database
 
 1> According to gene ID and GI ID in CDS.gff file, you can extract KEGG name from KEGG-geneid.list or KEGG-gi.list files.
 
@@ -179,9 +179,9 @@ you can obtain COG number directly in CDS.gff file. In COG database, cognames200
 	
 4> Based on the above results, you could establish COG annotation file.
 
-### 7. functional annotation of UniProt database and MetaCyc database
+#### 7. functional annotation of UniProt database and MetaCyc database
 
-
+ftp://ftp.uniprot.org/pub/databases/uniprot/
 
 
 Note: According to gene ID, GI ID and protein ID to find the annotation in databases of ARDB, CARD, CAZy, COG, KEGG, UniProt, MetaCyc. If you can't find the annotation, it is the best way to align DNA sequence to these databases for functional annotation using blast software. Finally, based on the above biological information to construct MDGM database.
