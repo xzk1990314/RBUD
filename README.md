@@ -19,7 +19,7 @@ as individual software packages (typically `Python`,`Perl` or `R`).
 - BLAST/Diamond
 - MDGM database
 
-Note: MDGM database is essential for RBUD method. For the purpose to study bacteria, viruses and fungus separately, we provided codes to establish a separated database that can save time and improve degree of accuracy. Befoe you use RBUD method, you should build your development envrionment in Linux. In addition, SOAPaligner/soap2 should be installed. 
+**Note:** MDGM database is essential for RBUD method. For the purpose to study bacteria, viruses and fungus separately, we provided codes to establish a separated database that can save time and improve degree of accuracy. Befoe you use RBUD method, you should build your development envrionment in Linux. In addition, SOAPaligner/soap2 should be installed. 
 
 ## **2. MDGM database** 
 
@@ -47,7 +47,7 @@ it is for creating binary of reference genome for species dataset.(2bwt-builder-
 it is for extracting the species annotation.(species_annotation.pl)
 
 	> perl species_annotation.pl
-Note: In this process, you could obtain the species taxnomy annotation information of all microorganisms, including Phylum, Class, Order, Family, Genus, Species.(species annotation) 
+**Note:** In this process, you could obtain the species taxnomy annotation information of all microorganisms, including Phylum, Class, Order, Family, Genus, Species.(species annotation) 
 
 ### **2.2.4 create binary of reference genome for functional dataset**
 
@@ -63,7 +63,7 @@ it is for creating binary of reference genome for functional dataset.(2bwt-build
 it is for extracting the functional annotation of microorganisms.(gene_annotation.pl)
 
 	> perl gene_annotation.pl
-Note: In this process, you could obtain the functional annotation information of microbial genes, including gene ID, GI ID, protein ID, COG functions, genetically coded function, location of species origin.(CDS.gff/gene.gff)
+**Note:** In this process, you could obtain the functional annotation information of microbial genes, including gene ID, GI ID, protein ID, COG functions, genetically coded function, location of species origin.(CDS.gff/gene.gff)
 
 ### **2.2.6 link different functional database with gene ID, GI ID and protein ID to find the comments**
 
@@ -71,7 +71,7 @@ Note: In this process, you could obtain the functional annotation information of
 
 1> Download https://ftp.ncbi.nih.gov/gene/DATA/gene2accession file
 
-2> According to gene ID and protein ID in gene functional annotation file (CDS.gff or gene.gff), you can extract protein_accession (the six column), protein_gi (the seven column), genomic_nucleotide_accession (the eight column), genomic_nucleotide_gi (the nine column) in the gene2accession file. And then you can transform different name in gene2accession.
+2> According to gene ID and protein ID in gene functional annotation file (CDS.gff or gene.gff), you can extract protein_accession (the six column),     protein_gi (the seven column), genomic_nucleotide_accession (the eight column), genomic_nucleotide_gi (the nine column) in the gene2accession file. And then you can transform different name in gene2accession.
 
 #### 2. functional annotation of ARDB database
 
