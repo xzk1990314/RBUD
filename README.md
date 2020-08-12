@@ -213,6 +213,10 @@ According to gene ID, GI ID and protein ID to find the annotation in databases o
 
 ## **3. Runing RBUD Method** 
 
+### **3.1 Alignment next generation sequencing data with MDGM database**
+
+Align query to genome
+
 
 
 
