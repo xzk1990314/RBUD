@@ -111,7 +111,7 @@ it is for extracting the functional annotation of microorganisms.(gene_annotatio
 	
 4> Based on the above results, you could establish CARD annotation file.
 
-#### 4. functional annotation of CAZy database
+#### 4. Functional annotation of CAZy database
 
 1> According to gene ID and protein ID (CDS.gff/gene.gff), you can obtain genebank name in gene2accession file.
 
@@ -143,7 +143,7 @@ it is for extracting the functional annotation of microorganisms.(gene_annotatio
 
 **Note:** you can use dimond or blast software to align species_protein.faa with CAZyDB.fa. Moreover, you also run dbcan software to find the annotation of target protein.
 
-#### 5. functional annotation of COG database (eggNOG database)
+#### 5. Functional annotation of COG database (eggNOG database)
 
 **The Best Way**
 
@@ -165,7 +165,7 @@ you can obtain COG number directly in CDS.gff file. In COG database, cognames200
 	
 4> Based on the above results, you could establish COG annotation file.
 
-#### 6. functional annotation of KEGG database
+#### 6. Functional annotation of KEGG database
 
 1> According to gene ID and GI ID in CDS.gff file, you can extract KEGG name from KEGG-geneid.list or KEGG-gi.list files.
 
@@ -179,12 +179,36 @@ you can obtain COG number directly in CDS.gff file. In COG database, cognames200
 	
 4> Based on the above results, you could establish COG annotation file.
 
-#### 7. functional annotation of UniProt database and MetaCyc database
+#### 7. Functional annotation of UniProt database and MetaCyc database
 
-ftp://ftp.uniprot.org/pub/databases/uniprot/
+1> download ftp://ftp.uniprot.org/pub/databases/uniprot/knowledgebase/idmapping/idmapping_selected.tab file. Here, the tab-delimited table which includes the following mappings delimited by tab: UniProtKB-AC, UniProtKB-ID, GeneID (EntrezGene), RefSeq, GI, PDB, GO, UniRef100, UniRef90, UniRef50, UniParc, PIR, NCBI-taxon, MIM, UniGene, PubMed, EMBL, EMBL-CDS, Ensembl, Ensembl_TRS, Ensembl_PRO, Additional PubMed.
 
+2> According to Gene ID and  GI ID (CDS.gff), you can extract the name of UniRef100, UniRef90, UniRef50.
 
-Note: According to gene ID, GI ID and protein ID to find the annotation in databases of ARDB, CARD, CAZy, COG, KEGG, UniProt, MetaCyc. If you can't find the annotation, it is the best way to align DNA sequence to these databases for functional annotation using blast software. Finally, based on the above biological information to construct MDGM database.
+3> Based on the name of UniRef100, UniRef90, UniRef50, you can obtain the annotation of protein in UniProt database.
+
+**another way**
+
+1> download ftp://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref50 file.
+
+2> alignment
+
+	> cd /MDGM database/Functional dataset/Annotation/Annotation Database/UniProt/Uniref
+	> diamond makedb --in uniref50.fasta -d uniref50.fasta -p 32
+	> diamond blastx -c 1 --db uniref50.fasta.dmnd -t /tmp -p 34 -q /MDGM database/Functional dataset/Sequence/all.ffn -o uniref_annotation --outfmt 6 
+
+3> Based on the above results, you could establish UniProt annotation file.
+
+**Note:** UniRef90 and UniRef100 are the same operation with Uniref50.
+
+#### MetaCyc
+
+Based on the above Uniref name, you can obtain metacyc name by metacyc_reactions_level4ec_only.uniref, metacyc_pathways_structured, metacyc_pathway. And then the annotation file of MetaCyc is built. 
+
+### **2.2.7 The construction of MDGM database**
+
+According to gene ID, GI ID and protein ID to find the annotation in databases of ARDB, CARD, CAZy, COG, KEGG, UniProt, MetaCyc. If you can't find the annotation, it is the best way to align DNA sequence to these databases for functional annotation using blast software. Finally, based on the above biological information to construct MDGM database.
+------------------------------------------------------------------------
 
 ## **Downstream analysis and statistics**
 
