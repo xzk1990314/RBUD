@@ -37,7 +37,7 @@ you should download all microorganism data from NCBI,the data should includ the 
 
 it is for creating binary of reference genome for species dataset.(2bwt-builder-species.sh)
 
-	> cd /database and method code/MDGM database/Species dataset/Sequence/NCBI_Species
+	> cd /MDGM database/Species dataset/Sequence/NCBI_Species
 	> tar -xvf all.fna.tar
 	> cat * >all.fna
 	> 2bwt-builder all.fna
@@ -53,7 +53,7 @@ Note: In this process, you could obtain the species taxnomy annotation informati
 
 it is for creating binary of reference genome for functional dataset.(2bwt-builder-CDS.sh)
 
-	> cd /database and method code/MDGM database/Functional dataset/Sequence/NCBI_CDS
+	> cd /MDGM database/Functional dataset/Sequence/NCBI_CDS
 	> tar -xvf all.ffn.tar
 	> cat * >all.ffn
 	> 2bwt-builder all.ffn
@@ -67,28 +67,39 @@ Note: In this process, you could obtain the functional annotation information of
 
 ### **2.2.6 link different functional database with gene ID, GI ID and protein ID to find the comments**
 
-#### 1. different 
+#### 1. transform different name in gene2accession
 
+1> Download https://ftp.ncbi.nih.gov/gene/DATA/gene2accession file
 
+2> According to gene ID and protein ID in gene functional annotation file (CDS.gff or gene.gff), you can extract protein_accession (the six column), protein_gi (the seven column), genomic_nucleotide_accession (the eight column), genomic_nucleotide_gi (the nine column) in the gene2accession file. And then you can transform different name in gene2accession.
 
-#### 1. functional annotation of ARDB database
+#### 2. functional annotation of ARDB database
 
 1> genomeblast.tab, ar_genes.tab, class2info.tab, resistance_profile.tab are opened in ARDB folder of linkdb_genes folder.
 
 2> For genomeblast.tab file, according to protein ID (the second column), you can obtained special ID of ARDB database (the third column).
 
-3> For ar_genes.tab file, you can transfer species ID (the first column) to antibiotic resistance gene name (the second column).
+3> For ar_genes.tab file, you can transfer special ID (the first column) to antibiotic resistance gene name (the second column).
 
 4> Based on antibiotic resistance gene name,  types of antibotic and functions of these genes are performed in resistance_profile.tab and classinfo.tab files separately.
 
-another way:
+another way1:
 
 	> perl ardbAnno.pl
+	
+another way2:
+
+	> cd /MDGM database/Functional dataset/Annotation/Annotation Database/ARDB/ardbAnno1.0/blastdb
+	> formatdb -i resisGenes.pfasta -p T
+	> blastall -i /MDGM database/Functional dataset/Sequence/all.ffn -d resisGenes.pfasta -o /MDGM database/Functional dataset/Annotation/Annotation Database/ARDB/resisGenes -p blastx -m 8 -e 1e-10
+
+5> Based on the results above, you could establish ARDB annotation file.
+
 #### 2. functional annotation of CARD database
 
-1> Download https://ftp.ncbi.nih.gov/gene/DATA/gene2accession file.
+.
 
-2> According to gene ID in gene functional annotation file (CDS.gff), you can extract protein_accession (the six column) in the gene2accession file.
+2> 
 
 3>Based on protein accession, you can obtain ARO name (the third column) and ARO accession (the fourth column) from aro_index file. And then, aro and CARD-aro_categories_index files provide antibiotic name (the second column)/description (the third column) and ARO Category Name (the third column) separately. 
 
