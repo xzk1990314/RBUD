@@ -208,6 +208,7 @@ Based on the above Uniref name, you can obtain metacyc name by metacyc_reactions
 ### **2.2.7 The construction of MDGM database**
 
 According to gene ID, GI ID and protein ID to find the annotation in databases of ARDB, CARD, CAZy, COG, KEGG, UniProt, MetaCyc. If you can't find the annotation, it is the best way to align DNA sequence to these databases for functional annotation using blast software. Finally, based on the above biological information to construct MDGM database.
+
 ------------------------------------------------------------------------
 
 ## **Downstream analysis and statistics**
