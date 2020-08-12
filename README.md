@@ -106,12 +106,12 @@ it is for extracting the functional annotation of microorganisms.(gene_annotatio
 **another way:**
 
 	> cd /MDGM database/Functional dataset/Annotation/Annotation Database/CARD
-	> formatdb -i ARmeta-genes -p T
-	> blastall -i /MDGM database/Functional dataset/Sequence/all.ffn -d ARmeta-genes -o /MDGM database/Functional dataset/Annotation/Annotation Database/CARD/CARD-ARmeta-genes -p blastx -m 8 -e 1e-10
+	> formatdb -i ARmeta-genes.fa -p T
+	> blastall -i /MDGM database/Functional dataset/Sequence/all.ffn -d ARmeta-genes.fa -o /MDGM database/Functional dataset/Annotation/Annotation Database/CARD/CARD-ARmeta-genes -p blastx -m 8 -e 1e-10
 	
 4> Based on the above results, you could establish CARD annotation file.
 
-### 3. functional annotation of CAZy database
+### 4. functional annotation of CAZy database
 
 1> According to gene ID and protein ID (CDS.gff/gene.gff), you can obtain genebank name in gene2accession file.
 
@@ -122,6 +122,7 @@ it is for extracting the functional annotation of microorganisms.(gene_annotatio
 4> FamInfo.txt file details all information of each family of CAZy database, including ncbi-cdd, cazy-class, cazy-note and cazy-activities.
 
 **another way:**
+
 1> download all microorganism data with the suffixes of .faa file from NCBI.
 
 2> download all.hmm.ps.len, dbCAN-fam-HMMs.txt, hsmmscan-parser.sh form dbCAN website.
@@ -137,11 +138,49 @@ it is for extracting the functional annotation of microorganisms.(gene_annotatio
 	> hmmpress dbCAN-fam-HMMs.txt
 	> hmmscan dbCAN-fam-HMMs.txt species_protein.faa >CAZyme.dbCAN
 	> hmmscan -parser.sh CAZyme.dbCAN >CAZyme.annot
-5> Based on the above results, you could establish CARD annotation file.
+
+5> Based on the above results, you could establish CAZy annotation file.
 
 **Note:** you can use dimond or blast software to align species_protein.faa with CAZyDB.fa. Moreover, you also run dbcan software to find the annotation of target protein.
 
-### 3. functional annotation of CAZy database
+### 5. functional annotation of COG database (eggNOG database)
+
+**The Best Way**
+
+you can obtain COG number directly in CDS.gff file. In COG database, cognames2003-2014.tab, fun2003-2014.tab, prot2003-2014.tab are used to find COG functions and protein name.
+	
+**another way1**
+
+1> According to gene ID and protein ID, you can extract the GI ID from gene2accession file.
+
+2> Based on GI ID (the first column), you can extract COG number from COG-gi-number.csv file.
+
+3> cognames2003-2014.tab, fun2003-2014.tab, prot2003-2014.tab are used to find COG functions and protein name in COG database.
+
+**another way2**
+
+	> cd /MDGM database/Functional dataset/Annotation/Annotation Database/COG
+	> formatdb -i prot2003-2014.fa -p T
+	> blastall -i /MDGM database/Functional dataset/Sequence/all.ffn -d pro2003-2014.fa -o /MDGM database/Functional dataset/Annotation/Annotation Database/COG/COG_annotation -p blastx -m 8 -e 1e-10
+	
+4> Based on the above results, you could establish COG annotation file.
+
+### 6. functional annotation of KEGG database
+
+1> According to gene ID and GI ID in CDS.gff file, you can extract KEGG name from KEGG-geneid.list or KEGG-gi.list files.
+
+2> Based on KEGG name, you can obtain KO number, uniprot number, pathway from genes_ko.list, genes_uniprot.lsit and genes_pathway,list files in KEGG database.
+
+**another way**
+
+	> cd /MDGM database/Functional dataset/Annotation/Annotation Database/KEGG
+	> formatdb -i genes.nuc -p T
+	> blastall -i /MDGM database/Functional dataset/Sequence/all.ffn -d genes.nuc -o /MDGM database/Functional dataset/Annotation/Annotation Database/KEGG/KEGG_annotation -p blastx -m 8 -e 1e-10
+	
+4> Based on the above results, you could establish COG annotation file.
+
+### 7. functional annotation of UniProt database and MetaCyc database
+
 
 
 
