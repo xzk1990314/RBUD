@@ -293,3 +293,18 @@ below for detailed tutorials:
 ### **4.3 Infrastructure and utilities**
 
 [![GraPhlAn](https://github.com/biobakery/biobakery/blob/master/images/3212034723-GraPhlAn.png)](https://github.com/biobakery/biobakery/wiki/graphlan) [![KneadData](https://github.com/biobakery/biobakery/blob/master/images/3968267398-KneadData.png)](https://github.com/biobakery/biobakery/wiki/kneaddata) [![AnADAMA](https://github.com/biobakery/biobakery/blob/master/images/1668386270-AnADAMA.png)](https://github.com/biobakery/biobakery/wiki/anadama2) [![workflows](https://github.com/biobakery/biobakery/blob/master/images/3531676205-workflows.png)](https://github.com/biobakery/biobakery/wiki/biobakery_workflows)
+
+------------------------------------------------------------------------
+## **5. Comparison of different methods**
+
+### **5.1 demo data**
+
+
+
+
+
+
+
+
+
+
