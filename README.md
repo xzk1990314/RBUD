@@ -234,8 +234,14 @@ Based on above sequence of all.fna and all.ffn, a script of length.py is used to
 
 ### **3.2 Alignment next generation sequencing data with MDGM database**
 
-Align query to genome
+#### **3.2.1 Align query sequence with microbial genome**
 
+Before you use RBUD method, you should align query sequence with microbial genome and store output.
+
+	> soap -a query.fastq -D /MDGM database/Species dataset/Sequence/NCBI_Species/all.fna.index -o species.soap -r 2 -m 200 -x 1000
+	>soap -a query_forward.fastq -b query_reverse.fastq -D /MDGM database/Species dataset/Sequence/NCBI_Species/all.fna.index -o species.soap -2 unalign_species.sop -r 2 -m 200 -x 1000
+	
+**Note:** The first command is applicable to single-end sequencing and the second command is suitable for paired-end sequencing.
 
 
 
