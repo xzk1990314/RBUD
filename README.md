@@ -41,12 +41,17 @@ it is for creating binary of reference genome for species dataset.(2bwt-builder-
 	> tar -xvf all.fna.tar
 	> cat * >all.fna
 	> 2bwt-builder all.fna
+	
+**Note:** In this step, you can divided all.fna into four groups to improve the speed of alignment.
 
 ### **2.2.3 Extract the species taxonomy annotation**
 
 it is for extracting the species annotation.(species_annotation.pl)
 
-	> perl species_annotation.pl
+	> cd /MDGM database/Species dataset/Annotation/NCBI species annotation
+	> tar -xvf all.gbk.tar.gz
+	> perl /RBUD code/MDGM database code/species_annotation.pl
+	
 **Note:** In this process, you could obtain the species taxnomy annotation information of all microorganisms, including Phylum, Class, Order, Family, Genus, Species.(species annotation) 
 
 ### **2.2.4 Create binary of reference genome for functional dataset**
@@ -57,12 +62,18 @@ it is for creating binary of reference genome for functional dataset.(2bwt-build
 	> tar -xvf all.ffn.tar
 	> cat * >all.ffn
 	> 2bwt-builder all.ffn
-	
+
+**Note:** In this step, you can divided all.ffn into four groups to improve the speed of alignment.
+
 ### **2.2.5 Extract the functional annotation**
 
 it is for extracting the functional annotation of microorganisms.(gene_annotation.pl)
 
-	> perl gene_annotation.pl
+	> cd /MDGM database/Functional dataset/Annotation/NCBI functional annotation
+	> tar -xvf all.gff.tar.gz
+	> cat * > all.gff
+	> perl /RBUD code/MDGM database code/gene_annotation.pl
+	
 **Note:** In this process, you could obtain the functional annotation information of microbial genes, including gene ID, GI ID, protein ID, COG functions, genetically coded function, location of species origin.(CDS.gff/gene.gff)
 
 ### **2.2.6 Link different functional database with gene ID, GI ID and protein ID to find the comments**
@@ -85,7 +96,7 @@ it is for extracting the functional annotation of microorganisms.(gene_annotatio
 
 **another way1:**
 
-	> perl ardbAnno.pl
+	> perl /RBUD code/MDGM database code/ardbAnno.pl
 	
 **another way2:**
 
@@ -213,7 +224,15 @@ According to gene ID, GI ID and protein ID to find the annotation in databases o
 
 ## **3. Runing RBUD Method** 
 
-### **3.1 Alignment next generation sequencing data with MDGM database**
+### **3.1 Calculate the length of microbial genome and CDS sequence**
+
+Based on above sequence of all.fna and all.ffn, a script of length.py is used to extract the length of every microbial genome and CDS sequence separately.
+
+	> python /RBUD code/RBUD running code/length.py
+	
+**Note:** In this step, species_length and function_length are obtained for the length of every microbial gneome and CDS sequence separately using this script.
+
+### **3.2 Alignment next generation sequencing data with MDGM database**
 
 Align query to genome
 
